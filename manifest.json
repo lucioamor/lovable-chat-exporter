@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Lovable Chat Exporter",
+  "version": "1.0.0",
+  "description": "Export your Lovable chat history as Markdown, HTML, or JSON.",
+  "permissions": [
+    "storage",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://lovable.dev/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://lovable.dev/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Lovable Chat Exporter"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
